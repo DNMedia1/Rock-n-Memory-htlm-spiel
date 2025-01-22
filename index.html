@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory of Rockstar Life</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Startbildschirm -->
+    <div id="start-screen" class="screen">
+        <h1 class="title-3d">Memory of Rockstar Life</h1>
+        <img src="rockstar-logo.jpg" alt="Rockstar Logo" class="start-image">
+        <p class="subtitle">Klicken zum Starten des Spiels</p>
+        <button id="start-button" onclick="showGameModeScreen()">Start</button>
+    </div>
+
+    <!-- Spielmodus-Auswahl -->
+    <div id="mode-selection" class="screen" style="display: none;">
+        <h2>Wähle den Spielmodus</h2>
+        <button onclick="startGame(1)">1 Spieler</button>
+        <button onclick="startGame(2)">2 Spieler</button>
+        <button onclick="goToStartScreen()">Zurück zum Start</button>
+    </div>
+
+    <!-- Spielcontainer -->
+    <div id="game-container" class="screen" style="display: none;">
+        <h1>Memory of Rockstar Life</h1>
+        <p id="turn-indicator">Spieler 1 ist am Zug</p>
+        <div id="game-board"></div>
+        <div class="buttons">
+            <button id="restart-btn" onclick="restartGame()">Neustart</button>
+            <button onclick="goToStartScreen()">Zurück zum Start</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
